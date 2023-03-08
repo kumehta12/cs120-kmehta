@@ -1,0 +1,3 @@
+1. I was able to display a full page Google Map, that was centered on South Central Boston with a street level zoomed view. In addition, I was able to create markers for each vehicle ID with their respective lattitude and longitude. I checked the performance before minifying the JS and CSS files and after. The prior load time without minifying for notuber.js was approximately 32 ms. After minifying the JS and CSS files, the load time of the notuber.js improved to approximately 21 ms. I also added some animation to the vehicle markers and displayed the vehicle IDs when a user would hover over a marker. I used the Google Maps JS API to implement this project. 
+2. N/A. 
+3. 6 hours.
