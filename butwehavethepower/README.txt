@@ -1,0 +1,3 @@
+1. I have correctly implemented annotating the we have the power video by setting up the event listener. I watched the video and noted down the start and end time for each phrase of the song. After that, I added the event listener to the video for the timeupdate. I then wrote the logic to display the lyrics in the time update function. In addition, I created a style css, to align the video, header text, and the annotated text in the center of the browser page. 
+2. N/A
+3. 4 hours
