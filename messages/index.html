@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Messages</title>
+<script>
+
+    function loadMessages() {
+        jsonData = '[{"id":1,"content":"Do you really want to hurt me?","username":"Boy"},{"id":2,"content":"Do you really want to make me cry?","username":"George"}]';
+
+        // Your code here......
+        const obj = JSON.parse(jsonData);
+        messages = document.getElementById("messages")
+
+        messages.innerHTML = "<p>" + "<strong>" + obj[0]["content"] + "</strong>" + " " + obj[0]["username"] + "</p>";
+        messages.innerHTML = "<p>" + messages.innerHTML + "<strong>" + obj[1]["content"] + "</strong>" + " " + obj[1]["username"] + "</p>";
+        // messages.innerHTML = "<p>" + messages.innerHTML + obj[0]["username"] + "</p>";
+        // messages.innerHTML = "<p>" + messages.innerHTML + obj[1]["username"] + "</p>";
+
+    }
+
+</script>
+</head>
+<body onload="loadMessages()">
+<h1>Messages</h1>
+<div id="messages"></div>
+</body>
+</html>
