@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Union Strike Folk Song</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <div class="container">
+    <h1 class=cnt id="title">Union Strike Folk Song</h1>
+    <video src="https://www.cs.tufts.edu/comp/120/butwehavethepower.mp4" id="butwehavethepower" controls></video>
+    <div id="lyrics"></div>
+    <script>
+    
+
+        var video = document.getElementById("butwehavethepower");
+        var lyrics =  document.getElementById("lyrics");
+
+        video.addEventListener("timeupdate", function() {
+
+            // Display the lyrics, phrase by phrase
+
+            if (video.currentTime > 5.5 && video.currentTime < 8) {
+                lyrics.innerHTML = "<p> <strong> Lisa:</strong> Come gather round, children</p>";
+            }        
+            else if (video.currentTime > 8 && video.currentTime < 10.5) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> It's high time ye learned</p>";
+            }        
+            else if (video.currentTime > 10.5 && video.currentTime < 13) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> 'Bout a hero named Homer</p>";
+            }
+            else if (video.currentTime > 13 && video.currentTime < 16.8) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> And a devil named Burns.</p>";
+            }
+            else if (video.currentTime > 16.8 && video.currentTime < 18.8) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> We'll march 'till we drop</p>";
+            }
+            else if (video.currentTime > 18.8 && video.currentTime < 21.2) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> The girls and the fellas.</p>";
+            }
+            else if (video.currentTime > 21.2 && video.currentTime < 23.1) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> We'll fight 'till the death</p>";
+            }
+            else if (video.currentTime > 23.1 && video.currentTime < 27) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> Or else fold like umbrellas.</p>";
+            }
+            else if (video.currentTime > 37.5 && video.currentTime < 40.2) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> So we'll march day and night</p>";
+            }
+            else if (video.currentTime > 40.2 && video.currentTime < 43.1) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> By the big cooling tower.</p>";
+            }
+            else if (video.currentTime > 43.1 && video.currentTime < 45.1) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> They have the plant</p>";
+            }
+            else if (video.currentTime > 45.1 && video.currentTime < 49.5) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> But we have the power.</p>";
+            }
+            else if (video.currentTime > 52.5 && video.currentTime < 54.5) {
+                lyrics.innerHTML = "<p><strong>Lenny:</strong> Now do Classical Gas!</p>";
+            }
+            else if (video.currentTime > 72.5 && video.currentTime < 74.8) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> So we'll march day and night</p>";
+            }
+            else if (video.currentTime > 74.8 && video.currentTime < 77.6) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> By the big cooling tower.</p>";
+            }
+            else if (video.currentTime > 77.6 && video.currentTime < 79.5) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> They have the plant</p>";
+            }
+            else if (video.currentTime > 79.5 && video.currentTime < 91.5) {
+                lyrics.innerHTML = "<p><strong>Lisa:</strong> But we have the power.</p>";
+            }
+            else {
+                lyrics.innerHTML ="";
+            }
+            
+        }, false);
+
+    </script>
+    </div>
+</body>
+</html>
