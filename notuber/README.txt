@@ -1,0 +1,3 @@
+1. I was able to add a Lat/Long marker to my location. I was able to query for rides by giving my username and location. I also added a click event listener to my marker, and all the ride markers. Clicking on any marker displays an info window with the information requested in this project. (distance and location of nearest ride). I was also able to create a poly line to the nearest ride. 
+2. N/A. 
+3. 6 hours.
