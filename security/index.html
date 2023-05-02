@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab13</title>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" />
+
+</head>
+<body>
+	<h1 class = "heading" >Lab 13 - Security and Privacy Assessment of Ride-Hailing Service</h1>
+	<h2> <span class = "heading"> Author </span> Kunal Mehta <br> </h2>
+
+	<h3> Introduction</h3> 
+	<p> This security lab is to be applied on a ride sharing service that was implemented in the previous assignment in this course. There are two types of users in the ride sharing service: vehicles, passengers. Each user is identified by a username that can submit their location, and gets the location of all usernames of the other type of users. In this Lab we are to determine some security vulnerabilities in the ride sharing service.</p>
+
+	<h4> Methodology</h4> 
+	<p> I experimented with curl to identify anomalies and vulnerability on the server side. Some of these issues are described below.</p>
+
+	<h4> Abstract of Findings</h4> 
+	<p> One of the issues identified is that the usernames are not validated and there are some usernames that are real names of the users as opposed to encrypted names. Another vulnerability enables the attackers to insert their script as a username or as a part of the username which could possibly take over the application for malicious intent. Similar scripts can also enable the attackers to corrupt the database.</p>
+
+	<h4> Issues found</h4> 
+		<p> 
+			<div class ="issue"> 
+				<ul>
+					<li> Issue: Broken Access Control, Identification and Authentication failures</li>
+                    <ul>
+                    <li>   Location: POST /rides </li>
+					<li>   Severity: High. A hacker may guess or manipulate driver names and locations.</li>
+					<li>   Description: A "Real driver name" was identified and manipulated with various curl commands. Searched and changed lat, lng for passengers with the same driver names.</li>
+					<li>   Proof:
+						     Same usernames with different IDs were found in the driver list sent from the server.
+						     <img src = "imgs/Proof-1.png" alt = "Proof-1" width = 50%/></li>
+					<li>   Resolution: All users must be verified and unique before proceeding with the execution of any subsequent code in the application. </li>
+                    </ul>
+                </ul>
+			</div>
+
+			<div class ="issue"> 
+				<ul>
+					<li> Issue: Injection - Script in data</li>
+                    <ul>
+                    <li> Location: POST /rides </li>
+					<li> Severity: High. Code highjacking vulnerability.  </li>
+					<li> Description: Script commands are accepted as data.</li>
+					<li> Proof: <br> 
+						<p> Script sent to server, as data in te username field.  <br> </p>
+						<img src = "./imgs/Proof-2.png" alt = "screenshot showing no error being returned by site when Javascript sent" width = 45%/>
+					<li> Resolution: Validate all data fields before accepting them.</li> 
+                    </ul>
+                </ul>
+			</div>
+	    </p>
+
+
+	<h4> Conclusion</h4> 
+	<p> Every developer should take into account the negative effect of attacks by hackers. Data required and accepted by the application must be validated and scrutinized for its authenticity. One must especially watch out for all possibilities and routes where scripts can be injected and prevent that from happening by thoroughly analyzing the data provided by the user in the client side processes. Similarly, the server side code must authenticate and validate all data, including json structures that carry the data into the server side application. </p>
+
+	<h4> References</h4> 
+	<a href ="https://owasp.org/www-project-top-ten/"> OWASP Top Ten </a> <br>
+ 
+
+</body>
+</html>
